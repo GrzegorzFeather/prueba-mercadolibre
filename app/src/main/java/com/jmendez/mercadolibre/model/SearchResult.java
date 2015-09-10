@@ -43,5 +43,37 @@ public class SearchResult {
   @SerializedName("title") private String mTitle;
   @SerializedName("price") private float mPrice;
   @SerializedName("thumbnail") private String mThumbnail;
+  @SerializedName("address") private Address mAddress;
+
+  public String getId() {
+    return mId;
+  }
+
+  public String getTitle() {
+    return mTitle;
+  }
+
+  public float getPrice() {
+    return mPrice;
+  }
+
+  public String getThumbnail() {
+    return mThumbnail;
+  }
+
+  public Address getAddress() {
+    return mAddress;
+  }
+
+  public String getAddressAsString() {
+    if(mAddress == null) {
+      return "Sin ubicación";
+    }
+    return new StringBuilder()
+        .append(mAddress.getStateName())
+        .append(", ")
+        .append(mAddress.getCityName())
+        .toString();
+  }
 
 }

@@ -12,6 +12,7 @@ import com.bumptech.glide.Glide;
 import com.jmendez.mercadolibre.R;
 import com.jmendez.mercadolibre.model.SearchResult;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,8 +45,10 @@ public class SearchResultsAdapter extends RecyclerView.Adapter<SearchResultsAdap
     SearchResult searchResult = mSearchResults.get(position);
 
     holder.mLblTitle.setText(searchResult.getTitle());
-    holder.mLblPrice.setText(String.valueOf(searchResult.getPrice()));
     holder.mLblLocation.setText(searchResult.getAddressAsString());
+
+    NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
+    holder.mLblPrice.setText(currencyFormat.format(searchResult.getPrice()));
 
     Glide.with(mContext)
         .load(searchResult.getThumbnail())

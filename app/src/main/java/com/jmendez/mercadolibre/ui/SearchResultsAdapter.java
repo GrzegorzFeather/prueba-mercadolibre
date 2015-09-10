@@ -49,6 +49,7 @@ public class SearchResultsAdapter extends RecyclerView.Adapter<SearchResultsAdap
 
     Glide.with(mContext)
         .load(searchResult.getThumbnail())
+        .placeholder(R.drawable.img_no_photo)
         .centerCrop()
         .crossFade()
         .into(holder.mImgThumbnail);

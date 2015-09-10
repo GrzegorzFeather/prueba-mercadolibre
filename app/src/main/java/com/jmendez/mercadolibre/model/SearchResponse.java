@@ -15,4 +15,8 @@ public class SearchResponse implements MercadoLibreAPIResponse {
   @SerializedName("results") private ArrayList<SearchResult> mResults;
   @SerializedName("sort") private Sort mSort;
 
+  public ArrayList<SearchResult> getResults() {
+    return mResults;
+  }
+
 }

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="horizontal"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:padding="10dp"
+  android:background="@android:color/white">
+
+  <ImageView android:id="@+id/img_thumbnail"
+    android:layout_width="120dp"
+    android:layout_height="120dp"/>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+    <TextView android:id="@+id/lbl_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:singleLine="true"
+      android:textColor="@android:color/black"
+      android:textSize="25sp"
+      android:text="Titulo"/>
+
+    <TextView android:id="@+id/lbl_price"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:singleLine="true"
+      android:textColor="@android:color/black"
+      android:textSize="20sp"
+      android:layout_marginTop="5dp"
+      android:layout_marginLeft="15dp"
+      android:text="$28.99"/>
+
+    <TextView android:id="@+id/lbl_location"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@android:color/darker_gray"
+      android:textSize="18sp"
+      android:layout_marginTop="10dp"
+      android:text="Titulo"/>
+
+  </LinearLayout>
+
+</LinearLayout>
